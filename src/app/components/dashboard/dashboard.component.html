@@ -1,0 +1,64 @@
+<h2>List years with multiple winners</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Winner Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let year of yearsWithMultipleWinners">
+      <td>{{ year.year }}</td>
+      <td>{{ year.winnerCount }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Top 3 Studios with winners</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Studio Name</th>
+      <th>Win Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let studio of topStudios">
+      <td>{{ studio.name }}</td>
+      <td>{{ studio.winCount }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Producers with longest and shortest Intervals Between Victories</h2>
+<div>
+  <h3>Longest Interval</h3>
+  <p *ngFor="let producer of maxInterval">
+    {{ producer.producer }}: {{ producer.interval }} years (from {{ producer.previousWin }} to {{ producer.followingWin }})
+  </p>
+</div>
+<div>
+  <h3>Shortest Interval</h3>
+  <p *ngFor="let producer of minInterval">
+    {{ producer.producer }}: {{ producer.interval }} years (from {{ producer.previousWin }} to {{ producer.followingWin }})
+  </p>
+</div>
+
+<h2>List movie winners by year</h2>
+<input type="number" [(ngModel)]="selectedYear" (change)="fetchWinnersByYear(selectedYear)" placeholder="Enter year" />
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Year</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let winner of winnersByYear">
+      <td>{{ winner.id }}</td>
+      <td>{{ winner.year }}</td>
+      <td>{{ winner.title }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -42,3 +42,52 @@
 .filter {
     margin-bottom: 20px;
 }
+
+.movies-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaço entre os cards */
+}
+
+.movies-list-card {
+  background-color: #f9f9f9; /* Cor cinza clara */
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra nas bordas inferior e direita */
+  flex: 1 1 calc(50% - 20px); /* Permite que os cards ocupem até 50% do espaço disponível */
+  box-sizing: border-box;
+  border-radius: 8px; /* Arredondar as bordas */
+}
+
+@media (max-width: 768px) {
+  .movies-list-card {
+    flex: 1 1 100%; /* Cards ocupam 100% do espaço disponível em telas menores */
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #D1D1D1;
+}
+
+th {
+  background-color: #DDD;
+  font-weight: bold;
+  border: 1px solid #D1D1D1;
+  padding: 8px;
+}
+
+td {
+  border: 1px solid #D1D1D1;
+  padding: 8px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #F5F5F5;
+}
+
+tbody tr:nth-child(even) {
+  background-color: white;
+}

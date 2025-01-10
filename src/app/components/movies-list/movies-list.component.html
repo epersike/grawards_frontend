@@ -19,13 +19,15 @@
   <table>
     <thead>
       <tr>
+        <th>ID</th>
         <th>Title</th>
         <th>Year</th>
         <th>Winner</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let movie of paginatedMovies">
+      <tr *ngFor="let movie of collection | paginate: { itemsPerPage: pageSize, currentPage: p }">
+        <td>{{ movie.id }}</td>
         <td>{{ movie.title }}</td>
         <td>{{ movie.year }}</td>
         <td>{{ movie.winner }}</td>

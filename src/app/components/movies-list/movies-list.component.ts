@@ -10,14 +10,14 @@ import { MovieService } from '../../services/movie.service';
 export class MoviesListComponent implements OnInit {
   movies: any[] = [];
   totalMovies: number = 0;
-  currentPage: number = 1;
+  page: number = 1;
   pageSize: number = 10;
   yearFilter: number | null = null;
   winnerFilter: boolean | null = null;
   selectedYear: number | null = null;
   selectedWinner: boolean | null = null;
   years: number[] = [];
-  paginatedMovies: any[] = [];
+  collection: any[] = [];
 
   constructor(private movieService: MovieService) {}
 
@@ -26,20 +26,20 @@ export class MoviesListComponent implements OnInit {
   }
 
   fetchMovies(): void {
-    this.movieService.getMovies(this.currentPage, this.pageSize, this.winnerFilter, this.yearFilter)
+    this.movieService.getMovies(this.page, this.pageSize, this.winnerFilter, this.yearFilter)
       .subscribe(response => {
-        this.paginatedMovies = response.content;
+        this.collection = response.content;
         this.totalMovies = response.totalElements;
       });
   }
 
   onPageChange(page: number): void {
-    this.currentPage = page;
+    this.page = page;
     this.fetchMovies();
   }
 
   applyFilters(): void {
-    this.currentPage = 1; // Reset to first page on filter change
+    this.page = 1; // Reset to first page on filter change
     this.fetchMovies();
   }
 

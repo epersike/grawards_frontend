@@ -1,5 +1,12 @@
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/movies-list">Movies List</a>
-</nav>
-<router-outlet></router-outlet>
+<header>
+  <h2>Frontend Angular Test</h2>
+</header>
+<div class="container">
+  <nav class="vertical-menu">
+    <a routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a>
+    <a routerLink="/movies-list" routerLinkActive="active-link">Movies List</a>
+  </nav>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

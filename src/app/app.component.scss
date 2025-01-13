@@ -1,24 +1,26 @@
+/* Body Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* Vertical Menu Styles */
 .vertical-menu {
-  width: 200px; /* Width of the menu */
+  width: 200px;
   top: 0;
   left: 0;
   height: 100%;
-  background-color: #f1f1f1; /* Background color of the menu */
+  background-color: #f1f1f1;
   padding-top: 20px;
   display: block;
   height: 100%;
   padding: 2px;
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
 }
 
 .vertical-menu a {
-  display: block; /* Display links as block elements */
+  display: block;
   color: #A39699;
   padding: 4px 8px;
   text-decoration: none;
@@ -33,11 +35,10 @@ body {
   color: #000;
 }
 
+/* Header Styles */
 header {
   background-color: #222;
   color: #fff;
-  padding: 1rem;
-  height: 3vh;
 }
 
 header h2 {
@@ -50,7 +51,7 @@ header h2 {
   margin: 0;
   padding: 0;
   display: flex;
-  height: 93vh; /* Full height of the viewport */
+  height: 93vh;
   max-width: 100%;
 }
 

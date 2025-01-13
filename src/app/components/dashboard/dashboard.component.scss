@@ -1,20 +1,24 @@
+// Host Styles
 :host {
   display: block;
   padding: 20px;
 }
 
+// Dashboard Styles
 .dashboard {
   display: block;
   flex-direction: column;
   padding: 20px;
 }
 
+// Dashboard Container Styles
 .dashboard-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px; /* Espaço entre os cards */
 }
 
+// Dashboard Card Styles
 .dashboard-card {
   background-color: #f9f9f9; /* Cor cinza clara */
   padding: 10px;
@@ -31,10 +35,12 @@
   }
 }
 
+// Dashboard Card Header Styles
 .dashboard-card h2 {
   margin: 0 0 10px 0;
 }
 
+// Dashboard Card Filter Styles
 .dashboard-card .filter {
   margin-bottom: 10px;
 }
@@ -57,6 +63,7 @@
   cursor: pointer;
 }
 
+// Dashboard table styles
 table {
   border-collapse: collapse;
   border: 1px solid #D1D1D1;

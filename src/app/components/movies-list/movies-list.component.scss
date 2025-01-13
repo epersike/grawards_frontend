@@ -3,7 +3,7 @@
     padding: 20px;
 }
 
-/* Styles for the Movies List TABLE */
+// Movies list table styles
 table {
   width: 100%;
   border-collapse: collapse;
@@ -68,9 +68,9 @@ tbody tr:nth-child(even) {
     border-radius: 5px;
     text-align: center;
 }
-/* End of Styles for the Movies List TABLE */
 
-/* Styles for the Movies List PAGINATION */
+// Movies list pagination styles
+
 pagination-controls {
     display: flex;
     justify-content: center;
@@ -82,9 +82,8 @@ pagination-controls ul {
     padding: 0;
     margin: 0;
 }
-/* End of Styles for the Movies List PAGINATION */
 
-/* Styles for the Movies List CARDS */
+// Cards stlyes
 .movies-list-container {
   display: flex;
   flex-wrap: wrap;
@@ -104,7 +103,6 @@ pagination-controls ul {
 
 @media (max-width: 768px) {
   .movies-list-card {
-    flex: 1 1 100%; /* Cards ocupam 100% do espaço disponível em telas menores */
+    flex: 1 1 100%;
   }
 }
-/* End of Styles for the Movies List CARDS */

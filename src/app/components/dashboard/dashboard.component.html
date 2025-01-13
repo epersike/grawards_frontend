@@ -83,7 +83,12 @@
 
   <div class="dashboard-card">
     <h2>List movie winners by year</h2>
-    <input type="number" [(ngModel)]="selectedYear" (change)="fetchWinnersByYear(selectedYear)" placeholder="Enter year" />
+    <div class="filter">
+      <input type="number" [(ngModel)]="selectedYear" placeholder="Enter year" />
+      <button (click)="fetchWinnersByYear(selectedYear)">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
     <table>
       <thead>
         <tr>

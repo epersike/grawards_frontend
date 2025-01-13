@@ -17,7 +17,7 @@
 
 .dashboard-card {
   background-color: #f9f9f9; /* Cor cinza clara */
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ddd;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra nas bordas inferior e direita */
   flex: 1 1 calc(50% - 20px); /* Permite que os cards ocupem até 50% do espaço disponível */
@@ -31,29 +31,36 @@
   }
 }
 
-.table {
-  margin-bottom: 20px;
-  width: 100%;
+.dashboard-card h2 {
+  margin: 0 0 10px 0;
 }
 
-.table th, .table td {
-  border: 1px solid #818181;
+.dashboard-card .filter {
+  margin-bottom: 10px;
+}
+
+.dashboard-card input {
+  width: 90%;
   padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.table th {
-  background-color: #f2f2f2;
-  text-align: left;
-}
-
-.select-year {
-  margin-bottom: 20px;
+.dashboard-card button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
   border: 1px solid #D1D1D1;
+  width: 100%;
 }
 
 th {
@@ -61,11 +68,13 @@ th {
   font-weight: bold;
   border: 1px solid #D1D1D1;
   padding: 8px;
+  width: 25%;
 }
 
 td {
   border: 1px solid #D1D1D1;
   padding: 8px;
+  width: 25%;
 }
 
 tbody tr:nth-child(even) {

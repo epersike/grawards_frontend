@@ -21,10 +21,17 @@ export class MoviesListComponent implements OnInit {
 
   constructor(private movieService: MovieService) {}
 
+  /**
+   * ngOnInit: Lifecycle hook that is called after data-bound properties of a directive are initialized.
+   * Initializes the component by fetching the initial list of movies.
+   */
   ngOnInit(): void {
     this.fetchMovies();
   }
 
+  /**
+   * fetchMovies: Fetches the list of movies from the API based on the current filters and pagination settings.
+   */
   fetchMovies(): void {
     this.movieService.getMovies(this.page, this.pageSize, this.winnerFilter, this.yearFilter)
       .subscribe(response => {
@@ -33,6 +40,10 @@ export class MoviesListComponent implements OnInit {
       });
   }
 
+  /**
+   * onPageChange: Handles the page change event and fetches the movies for the new page.
+   * @param page The new page number.
+   */
   onPageChange(page: number): void {
     this.page = page;
     this.fetchMovies();

@@ -8,14 +8,14 @@
         <th>
           Year
           <div>
-            <input type="number" id="yearFilter" [(ngModel)]="yearFilter" (change)="fetchMovies()" placeholder="Enter year" />
+            <input type="number" id="yearFilter" [(ngModel)]="yearFilter" (change)="onFilterChange()" placeholder="Enter year" />
           </div>
         </th>
         <th>Title</th>
         <th>
           Winner
           <div>
-            <select id="winnerFilter" [(ngModel)]="winnerFilter" (change)="fetchMovies()">
+            <select id="winnerFilter" [(ngModel)]="winnerFilter" (change)="onFilterChange()">
               <option [ngValue]="null">All</option>
               <option [ngValue]="true">Yes</option>
               <option [ngValue]="false">No</option>

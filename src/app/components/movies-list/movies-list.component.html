@@ -1,7 +1,7 @@
 <div class="movies-list">
   <h2>Movies List</h2>
   
-  <table>
+  <table class="movies-table">
     <thead>
       <tr>
         <th>ID</th>
@@ -10,7 +10,6 @@
           <div>
             <input type="number" id="yearFilter" [(ngModel)]="yearFilter" (change)="fetchMovies()" placeholder="Enter year" />
           </div>
- 
         </th>
         <th>Title</th>
         <th>

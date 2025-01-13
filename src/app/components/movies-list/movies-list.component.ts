@@ -10,7 +10,7 @@ import { MovieService } from '../../services/movie.service';
 export class MoviesListComponent implements OnInit {
   movies: any[] = [];
   totalMovies: number = 0;
-  page: number = 1;
+  page: number = 0;
   pageSize: number = 10;
   yearFilter: number | null = null;
   winnerFilter: boolean | null = null;
@@ -39,7 +39,7 @@ export class MoviesListComponent implements OnInit {
   }
 
   applyFilters(): void {
-    this.page = 1; // Reset to first page on filter change
+    this.page = 0;
     this.fetchMovies();
   }
 

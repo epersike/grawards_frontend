@@ -1,36 +1,36 @@
 <div class="movies-list">
   <h2>Movies List</h2>
   
-  <div class="filters">
-    <div>
-      <label for="yearFilter">Year:</label>
-      <input type="number" id="yearFilter" [(ngModel)]="yearFilter" (change)="fetchMovies()" placeholder="Enter year" />
-    </div>
-    <div>
-      <label for="winnerFilter">Winner:</label>
-      <select id="winnerFilter" [(ngModel)]="winnerFilter" (change)="fetchMovies()">
-        <option [ngValue]="null">All</option>
-        <option [ngValue]="true">Yes</option>
-        <option [ngValue]="false">No</option>
-      </select>
-    </div>
-  </div>
-
   <table>
     <thead>
       <tr>
         <th>ID</th>
+        <th>
+          Year
+          <div>
+            <input type="number" id="yearFilter" [(ngModel)]="yearFilter" (change)="fetchMovies()" placeholder="Enter year" />
+          </div>
+ 
+        </th>
         <th>Title</th>
-        <th>Year</th>
-        <th>Winner</th>
+        <th>
+          Winner
+          <div>
+            <select id="winnerFilter" [(ngModel)]="winnerFilter" (change)="fetchMovies()">
+              <option [ngValue]="null">All</option>
+              <option [ngValue]="true">Yes</option>
+              <option [ngValue]="false">No</option>
+            </select>
+          </div>         
+        </th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let movie of collection | paginate: { itemsPerPage: pageSize, currentPage: page }">
+      <tr *ngFor="let movie of collection | paginate: { itemsPerPage: pageSize, currentPage: page, totalItems: totalMovies }">
         <td>{{ movie.id }}</td>
-        <td>{{ movie.title }}</td>
         <td>{{ movie.year }}</td>
-        <td>{{ movie.winner }}</td>
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.winner ? 'Yes' : 'No' }}</td>
       </tr>
     </tbody>
   </table>

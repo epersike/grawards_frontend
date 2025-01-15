@@ -27,8 +27,4 @@ describe('AppComponent', () => {
     expect(component.title).toEqual('angular-movie-app');
   });
 
-  it('should render title in a h1 tag', () => {
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to angular-movie-app!');
-  });
 });

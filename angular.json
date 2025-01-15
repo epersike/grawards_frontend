@@ -11,9 +11,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": {
-              "base": "dist/angular-movie-app"
-            },
+            "outputPath": "dist/angular-movie-app",
             "index": "src/index.html",
             "polyfills": [
               "src/polyfills.ts"
@@ -41,7 +39,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -52,8 +49,19 @@
                   "maximumError": "5kb"
                 }
               ]
+            },
+            "development": {
+              "optimization": {
+                "scripts": false,
+                "styles": false,
+                "fonts": false
+              },
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -99,6 +107,6 @@
     }
   },
   "cli": {
-    "analytics": "1784aa41-2486-422a-b434-6f2c08cb30a5"
+    "analytics": false
   }
 }

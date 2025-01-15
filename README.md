@@ -14,71 +14,27 @@ This is an Angular application that provides a dashboard and a movies list view.
   - Displays a paginated list of movies.
   - Includes filters for year and winner status.
 
-## Project Structure
-
-```
-angular-movie-app
-├── e2e
-│   ├── src
-│   │   └── app.e2e-spec.ts
-│   └── protractor.conf.js
-├── src
-│   ├── app
-│   │   ├── components
-│   │   │   ├── dashboard
-│   │   │   │   ├── dashboard.component.html
-│   │   │   │   ├── dashboard.component.scss
-│   │   │   │   ├── dashboard.component.spec.ts
-│   │   │   │   └── dashboard.component.ts
-│   │   │   ├── movies-list
-│   │   │   │   ├── movies-list.component.html
-│   │   │   │   ├── movies-list.component.scss
-│   │   │   │   ├── movies-list.component.spec.ts
-│   │   │   │   └── movies-list.component.ts
-│   │   ├── services
-│   │   │   └── movie.service.ts
-│   │   ├── app-routing.module.ts
-│   │   ├── app.component.html
-│   │   ├── app.component.scss
-│   │   ├── app.component.spec.ts
-│   │   └── app.component.ts
-│   ├── assets
-│   ├── environments
-│   │   ├── environment.prod.ts
-│   │   └── environment.ts
-│   ├── index.html
-│   ├── main.ts
-│   ├── polyfills.ts
-│   ├── styles.scss
-│   └── test.ts
-├── angular.json
-├── package.json
-├── tsconfig.app.json
-├── tsconfig.json
-├── tsconfig.spec.json
-└── README.md
-```
-
 ## Installation
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-repo/angular-movie-app.git
+   git clone https://github.com/epersike/grawards_frontend.git
+   cd grawards_frontend
    ```
 2. Navigate to the project directory:
    ```
-   cd angular-movie-app
+   cd grawards_frontend
    ```
 3. Install the dependencies:
    ```
-   npm install
+   yarn install
    ```
 
 ## Running the Application
 
 To run the application in development mode, use the following command:
 ```
-ng serve
+yarn start
 ```
 Open your browser and navigate to `http://localhost:4200`.
 
@@ -86,12 +42,7 @@ Open your browser and navigate to `http://localhost:4200`.
 
 To run unit tests, use:
 ```
-ng test
-```
-
-For end-to-end tests, use:
-```
-ng e2e
+yarn test
 ```
 
 ## API Reference
